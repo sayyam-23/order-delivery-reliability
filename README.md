@@ -23,6 +23,14 @@ The analysis compares seller-route groups, examines estimated shipping distances
 | Outside-RJ sellers only | 11,389 | 1,450 | 12.73% |
 | RJ sellers only | 944 | 45 | 4.77% |
 
+
+<img width="887" height="447" alt="Screenshot 2026-10-17 at 3 08 54 PM" src="https://github.com/user-attachments/assets/357b42af-b4c2-42b9-b80b-4af211345e1d" />
+
+![Late-delivery rates for orders delivered to Rio de Janeiro](delivery_rate_comparison.png)
+
+*Orders involving only outside-RJ sellers had a 12.73% late-delivery rate, compared with 4.77% for orders involving only RJ sellers.*
+
+
 The observed difference was **7.96 percentage points**, with an approximate 95% confidence interval of 6.47 to 9.46 percentage points.
 
 The median time from carrier handoff to customer delivery was 9.09 days for outside-RJ seller orders, compared with 2.23 days for RJ-only seller orders.
