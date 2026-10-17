@@ -26,7 +26,6 @@ The analysis compares seller-route groups, examines estimated shipping distances
 
 <img width="887" height="447" alt="Screenshot 2026-10-17 at 3 08 54 PM" src="https://github.com/user-attachments/assets/357b42af-b4c2-42b9-b80b-4af211345e1d" />
 
-![Late-delivery rates for orders delivered to Rio de Janeiro](delivery_rate_comparison.png)
 
 *Orders involving only outside-RJ sellers had a 12.73% late-delivery rate, compared with 4.77% for orders involving only RJ sellers.*
 
