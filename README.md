@@ -8,6 +8,12 @@ In this project, I used SQL and Python to analyze the Olist Brazilian E-Commerce
 
 The analysis compares seller-route groups, examines estimated shipping distances, quantifies delivery-rate differences, and models hypothetical improvements to translate the findings into practical business recommendations.
 
+## Analysis Workflow
+
+The project follows a reproducible workflow from source data validation through SQL transformation, delivery analysis, scenario modelling, and operational recommendations.
+
+[View the one-page analysis workflow (PDF)](Order_Lifecycle_Flowchart.pdf)
+
 ## Business Questions
 
 - Do orders involving sellers outside Rio de Janeiro have different late-delivery rates from orders involving only RJ sellers?
@@ -23,12 +29,9 @@ The analysis compares seller-route groups, examines estimated shipping distances
 | Outside-RJ sellers only | 11,389 | 1,450 | 12.73% |
 | RJ sellers only | 944 | 45 | 4.77% |
 
-
-<img width="887" height="447" alt="Screenshot 2026-10-17 at 3 08 54 PM" src="https://github.com/user-attachments/assets/357b42af-b4c2-42b9-b80b-4af211345e1d" />
-
+![Comparison of late-delivery rates by seller route](https://github.com/user-attachments/assets/357b42af-b4c2-42b9-b80b-4af211345e1d)
 
 *Orders involving only outside-RJ sellers had a 12.73% late-delivery rate, compared with 4.77% for orders involving only RJ sellers.*
-
 
 The observed difference was **7.96 percentage points**, with an approximate 95% confidence interval of 6.47 to 9.46 percentage points.
 
@@ -55,7 +58,7 @@ This is an illustrative scenario, not a forecast or a guarantee of improvement.
 
 ## Methodology
 
-1. Loaded and inspected six related order, item, payment, review, customer, and seller tables.
+1. Loaded and inspected six related order, item, payment, review, customer, and seller tables, plus geolocation data for the distance analysis.
 2. Used SQL and DuckDB common table expressions (CTEs) to aggregate related records before joining them to orders.
 3. Validated row counts and unique order IDs.
 4. Compared route-level late-delivery rates and applied a two-proportion statistical test.
@@ -78,6 +81,14 @@ The dataset contains anonymized Brazilian e-commerce order information from 2016
 
 The raw dataset is not included in this repository. Download it from the original source and follow the dataset's **CC BY-NC-SA 4.0** license and attribution requirements.
 
+## Repository Contents
+
+- `Order_Lifecycle_Analysis.ipynb` — Python and SQL analysis, validation, charts, and conclusions
+- `order_lifecycle_analysis.sql` — reusable SQL transformation query
+- `Order_Lifecycle_Flowchart.pdf` — one-page project workflow
+- `requirements.txt` — Python dependencies
+- `README.md` — project overview, findings, methodology, and run instructions
+
 ## How to Run
 
 1. Clone or download this repository.
@@ -86,7 +97,7 @@ The raw dataset is not included in this repository. Download it from the origina
 4. Place the required CSV files alongside the notebook.
 5. Open `Order_Lifecycle_Analysis.ipynb` in Jupyter and run the cells in order.
 
-The analysis uses these files:
+The notebook uses these files:
 
 - `olist_orders_dataset.csv`
 - `olist_order_items_dataset.csv`
